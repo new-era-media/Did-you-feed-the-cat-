@@ -3,7 +3,7 @@
   font-family: MS;
   src: url(../assets/fonts/9412.ttf);
 }
-.disable {
+.disable .card-container__card {
   cursor: not-allowed;
 }
 .disable .card-container__card:after, .disable .card-container__card_portion, .disable .card-container__card_gift, .disable .card-container__card_preTitle, .disable .card-container__card_feedback, .disable .card-container__card_title, .disable .card-container__card_filling, .disable .card-container__card_circle {

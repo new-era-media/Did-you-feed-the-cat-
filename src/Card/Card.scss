@@ -12,8 +12,8 @@
 }
 
 .disable {
-  cursor: not-allowed;
   .card-container__card {
+    cursor: not-allowed;
     // pointer-events: none;
     &:after,
     &_portion,
