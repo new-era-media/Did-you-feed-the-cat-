@@ -25,7 +25,7 @@
   background-size: contain;
   overflow: hidden;
   position: relative;
-  margin: 10px 30px 10px 30px;
+  margin: 10px 30px;
 }
 .card-container__card:after {
   content: "";
@@ -87,6 +87,7 @@
   text-align: center;
   color: white;
   font-size: 10pt;
+  margin-bottom: 15px;
 }
 .card-container__text .Pay {
   color: #169ad1;

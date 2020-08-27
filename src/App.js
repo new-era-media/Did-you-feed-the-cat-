@@ -54,7 +54,7 @@ class App extends Component {
         ),
         gift: (
           <span>
-            <strong>2 </strong>мыши в подарок
+            <strong>2</strong> мыши в подарок
           </span>
         ),
         volume: "2",
@@ -72,7 +72,7 @@ class App extends Component {
         ),
         gift: (
           <span>
-            <strong>5 </strong>мыши в подарок
+            <strong>5</strong> мыши в подарок
           </span>
         ),
         volume: "5",
