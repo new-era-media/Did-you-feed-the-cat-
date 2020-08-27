@@ -1,21 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap");
+@font-face {
+  font-family: MS;
+  src: url(../assets/fonts/9412.ttf);
+}
+.disable {
+  cursor: not-allowed;
+}
+.disable .card-container__card:after, .disable .card-container__card_portion, .disable .card-container__card_gift, .disable .card-container__card_preTitle, .disable .card-container__card_feedback, .disable .card-container__card_title, .disable .card-container__card_filling, .disable .card-container__card_circle {
+  opacity: 0.5 !important;
+}
+
 .card-container {
+  cursor: pointer;
   position: relative;
   z-index: 2;
+  font-family: MS;
+}
+.card-container_card p, .card-container_card div, .card-container_card h2 {
+  pointer-events: none;
 }
 .card-container__card {
   width: 320px;
   height: 480px;
-  background-image: url(../assets/image/bg_card-1.png);
+  background-size: contain;
   overflow: hidden;
   position: relative;
+  margin: 10px 30px 10px 30px;
 }
 .card-container__card:after {
   content: "";
   position: absolute;
   width: 300px;
   height: 260px;
-  bottom: 2.5px;
-  left: 2.5px;
+  bottom: 3px;
+  left: 3px;
   background: url(../assets/image/Cat.png) no-repeat;
   border-radius: 10px;
+  z-index: 1;
+}
+.card-container__card_portion, .card-container__card_gift, .card-container__card_preTitle, .card-container__card_feedback {
+  position: relative;
+  color: grey;
+  font-size: 12pt;
+  z-index: 3;
+}
+.card-container__card_preTitle {
+  margin: 15px 0 0 45px;
+}
+.card-container__card_title {
+  margin: 5px 0 0 45px;
+  font-size: 38pt;
+  font-weight: 600;
+}
+.card-container__card_filling {
+  margin: 0px 0 0 45px;
+  font-size: 18pt;
+  font-weight: 600;
+}
+.card-container__card_portion {
+  margin: 15px 0 0 45px;
+}
+.card-container__card_gift, .card-container__card_feedback {
+  margin: 0px 0 0 45px;
+}
+.card-container__card_circle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  color: white;
+  z-index: 2;
+}
+.card-container__card_circle .card_circle-number {
+  font-size: 30pt !important;
+}
+.card-container__card_circle .card_circle-unit {
+  font-size: 16pt !important;
+}
+.card-container__text {
+  text-align: center;
+  color: white;
+  font-size: 10pt;
+}
+.card-container__text .Pay {
+  color: #169ad1;
+  border-bottom: 1px dashed #169ad1;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .card-container__card {
+    width: 280px !important;
+    height: 420px !important;
+    margin: 0 !important;
+  }
+  .card-container__card:after {
+    width: 300px;
+    height: 260px;
+    background-size: 70%;
+    background-position: 0 100%;
+    border-radius: 10px !important;
+  }
 }

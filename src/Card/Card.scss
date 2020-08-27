@@ -1,21 +1,134 @@
-.card-container{
-    &__card{
-        width: 320px;
-        height: 480px;
-        background-image: url(../assets/image/bg_card-1.png);
-        overflow: hidden;
-        position: relative;
-        &:after{
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 260px;
-            bottom: 2.5px;
-            left: 2.5px;
-            background: url(../assets/image/Cat.png) no-repeat; //Картинку обрезал по размеру, что бы занимала меньше места и избежать лишнего блока
-            border-radius: 10px;
-        }
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap");
+@font-face {
+  font-family: MS;
+  src: url(../assets/fonts/9412.ttf);
+}
+
+@mixin text-dec {
+  position: relative;
+  color: grey;
+  font-size: 12pt;
+  z-index: 3;
+}
+
+.disable {
+  cursor: not-allowed;
+  .card-container__card {
+    // pointer-events: none;
+    &:after,
+    &_portion,
+    &_gift,
+    &_preTitle,
+    &_feedback,
+    &_title,
+    &_filling,
+    &_circle {
+      opacity: 0.5 !important;
     }
+  }
+}
+.card-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  font-family: MS;
+  &_card p,
+  &_card div,
+  &_card h2 {
+    pointer-events: none;
+  }
+  &__card {
+    width: 320px;
+    height: 480px;
+    background-size: contain;
+    overflow: hidden;
     position: relative;
-    z-index: 2;
+    margin: 10px 30px 10px 30px;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 260px;
+      bottom: 3px;
+      left: 3px;
+      background: url(../assets/image/Cat.png) no-repeat; //Картинку обрезал по размеру, что бы занимала меньше места и избежать лишнего блока
+      border-radius: 10px;
+      z-index: 1;
+    }
+    &_portion,
+    &_gift,
+    &_preTitle,
+    &_feedback {
+      @include text-dec();
+    }
+    &_preTitle {
+      margin: 15px 0 0 45px;
+    }
+    &_title {
+      margin: 5px 0 0 45px;
+      font-size: 38pt;
+      font-weight: 600;
+    }
+    &_filling {
+      margin: 0px 0 0 45px;
+      font-size: 18pt;
+      font-weight: 600;
+    }
+    &_portion {
+      margin: 15px 0 0 45px;
+    }
+    &_gift,
+    &_feedback {
+      margin: 0px 0 0 45px;
+    }
+
+    &_circle {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      color: white;
+      z-index: 2;
+      .card_circle-number {
+        font-size: 30pt !important;
+      }
+      .card_circle-unit {
+        font-size: 16pt !important;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: white;
+    font-size: 10pt;
+    .Pay {
+      color: #169ad1;
+      border-bottom: 1px dashed #169ad1;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-container {
+    &__card {
+      width: 280px !important;
+      height: 420px !important;
+      margin: 0 !important;
+      &:after {
+        width: 300px;
+        height: 260px;
+        background-size: 70%;
+        background-position: 0 100%;
+        border-radius: 10px !important;
+      }
+    }
+  }
 }

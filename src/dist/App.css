@@ -36,8 +36,38 @@
 .App-title {
   color: white;
   font-size: 36pt;
-  font-family: "Exo 2", sans-serif;
+  margin: 15px 0;
+  font-family: "Exo 2";
+  font-weight: lighter;
   text-align: center;
   position: relative;
   z-index: 2;
+}
+.App-frame-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 65px !important;
+}
+
+@media screen and (max-width: 1280px) {
+  .App-frame-cards {
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .App-title {
+    font-size: 30pt !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .App-title {
+    font-size: 24pt !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .App-title {
+    font-size: 18pt !important;
+  }
 }
