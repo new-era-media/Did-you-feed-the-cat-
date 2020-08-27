@@ -33,7 +33,9 @@ class App extends Component {
         text: (
           <span>
             Чего сидишь? Порадуй котэ,
-            <span className="Pay" onClick={this.test.bind(this, "Fuagra")}>
+            <span className="Pay" onClick={(e) => {
+                  this.test(e, 'Fuagra');
+                }}>
               {" "}
               купи.
             </span>
@@ -101,10 +103,6 @@ class App extends Component {
           {this.state.cards.map((item, index) => {
             return (
               <Card
-                // addHendler={this.test.bind(
-                //   this,
-                //   this.state.cards[index].dataname
-                // )}
                 addHendler={(e) => {
                   this.test(e, this.state.cards[index].dataname);
                 }}
