@@ -1,0 +1,21 @@
+.card-container {
+  position: relative;
+  z-index: 2;
+}
+.card-container__card {
+  width: 320px;
+  height: 480px;
+  background-image: url(../assets/image/bg_card-1.png);
+  overflow: hidden;
+  position: relative;
+}
+.card-container__card:after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 260px;
+  bottom: 2.5px;
+  left: 2.5px;
+  background: url(../assets/image/Cat.png) no-repeat;
+  border-radius: 10px;
+}
