@@ -3,7 +3,7 @@ import "./App.scss";
 import Card from "./Card/Card";
 
 class App extends Component {
-  test = (e, el) => {
+  shop = (e, el) => {
     if (!e.target.closest(".disable")) {
       let shoppingСart = this.state.shoppingСart;
       if (this.state.shoppingСart.indexOf(el) === -1) {
@@ -34,7 +34,7 @@ class App extends Component {
           <span>
             Чего сидишь? Порадуй котэ,
             <span className="Pay" onClick={(e) => {
-                  this.test(e, 'Fuagra');
+                  this.shop(e, 'Fuagra');
                 }}>
               {" "}
               купи.
@@ -72,7 +72,7 @@ class App extends Component {
         ),
         gift: (
           <span>
-            <strong>5</strong> мыши в подарок
+            <strong>5</strong> мышей в подарок
           </span>
         ),
         volume: "5",
@@ -104,7 +104,7 @@ class App extends Component {
             return (
               <Card
                 addHendler={(e) => {
-                  this.test(e, this.state.cards[index].dataname);
+                  this.shop(e, this.state.cards[index].dataname);
                 }}
                 dataname={item.dataname}
                 filling={item.filling}
