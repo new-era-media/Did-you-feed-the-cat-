@@ -10,7 +10,7 @@ class App extends Component {
         let shoppingСart = this.state.shoppingСart;
         shoppingСart.push(el);
       } else {
-        shoppingСart = shoppingСart.filter((word) => word !== el);
+        shoppingСart = shoppingСart.filter((item) => item !== el);
       }
       this.setState({
         shoppingСart,
